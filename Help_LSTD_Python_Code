@@ -1,0 +1,330 @@
+def datatype_methods_info():
+    """
+    Provides information about major methods that can be performed on lists, strings, tuples, and dictionaries.
+    """
+    datatype = (input("Which datatype do you want to know about? (list, string, tuple, dictionary): ")).lower()
+    print(datatype)
+    if datatype not in ["list", "string", "tuple", "dictionary"]:
+        print("Invalid datatype specified.")
+        return
+    
+    method = (input(f"Which method do you want to know about for {datatype}? (type 'all' for all methods): ")).lower()
+    if datatype == "list":
+        if method == "all":
+            print("append: Adds an element to the end of the list.")
+            print("extend: Adds all the elements of an iterable to the end of the list.")
+            print("insert: Inserts an element at the specified position.")
+            print("remove: Removes the first occurrence of an element from the list.")
+            print("pop: Removes and returns the element at the specified index.")
+            print("index: Returns the index of the first occurrence of an element in the list.")
+            print("count: Returns the number of times an element appears in the list.")
+            print("sort: Sorts the elements of the list in ascending order.")
+            print("reverse: Reverses the order of the elements in the list.")
+        elif method == "append":
+            print("Syntax: list.append(elem)")
+            print("Description: Adds an element to the end of the list.")
+            print("Example: mylist = [1, 2, 3]\nmylist.append(4)\nprint(mylist)  # Output: [1, 2, 3, 4]")
+        elif method == "extend":
+            print("Syntax: list.extend(iterable)")
+            print("Description: Adds all the elements of an iterable to the end of the list.")
+            print("Example: mylist = [1, 2, 3]\nmylist.extend([4, 5, 6])\nprint(mylist)  # Output: [1, 2, 3, 4, 5, 6]")
+        elif method == "insert":
+            print("Syntax: list.insert(index, elem)")
+            print("Description: Inserts an element at the specified position.")
+            print("Example: mylist = [1, 2, 3]\nmylist.insert(1, 4)\nprint(mylist)  # Output: [1, 4, 2, 3]")
+        elif method == "remove":
+            print("Syntax: list.remove(elem)")
+            print("Description: Removes the first occurrence of an element from the list.")
+            print("Example: mylist = [1, 2, 3, 4]\nmylist.remove(3)\nprint(mylist)  # Output: [1, 2, 4]")
+        elif method == "pop":
+            print("Syntax: list.pop(index)")
+            print("Description: Removes and returns the element at the specified index.")
+            print("Example: mylist = [1, 2, 3]\nprint(mylist.pop(1))  # Output: 2\nprint(mylist)  # Output: [1, 3]")
+        elif method == "index":
+            print("Syntax: list.index(elem)")
+            print("Description: Returns the index of the first occurrence of an element in the list.")
+            print("Example: mylist = [1, 2, 3, 4]\nprint(mylist.index(3))  # Output")
+    
+    
+    elif datatype == "string":
+        if method == "all":
+            print("capitalize: Returns a capitalized version of the string.")
+            print("casefold: Returns a casefolded version of the string.")
+            print("center: Returns a centered version of the string.")
+            print("count: Returns the number of non-overlapping occurrences of a substring.")
+            print("encode: Returns an encoded version of the string.")
+            print("endswith: Returns True if the string ends with the specified suffix.")
+            print("find: Returns the lowest index of a substring.")
+            print("format: Formats the string using placeholders.")
+            print("index: Returns the lowest index of a substring.")
+            print("isalnum: Returns True if all characters are alphanumeric.")
+            print("isalpha: Returns True if all characters are alphabetic.")
+            print("isdecimal: Returns True if all characters are decimal.")
+            print("isdigit: Returns True if all characters are digits.")
+            print("isidentifier: Returns True if the string is a valid identifier.")
+            print("islower: Returns True if all characters are lowercase.")
+            print("isnumeric: Returns True if all characters are numeric.")
+            print("isprintable: Returns True if all characters are printable.")
+            print("isspace: Returns True if all characters are whitespace.")
+            print("istitle: Returns True if the string is titlecased.")
+            print("isupper: Returns True if all characters are uppercase.")
+            print("join: Joins the elements of an iterable to create a string.")
+            print("ljust: Returns a left-justified version of the string.")
+            print("lower: Returns a lowercase version of the string.")
+            print("lstrip: Returns a left-trimmed version of the string.")
+            print("partition: Returns a tuple containing the left part, separator, and right part of the string.")
+            print("replace: Returns a string with all occurrences of a substring replaced.")
+            print("rfind: Returns the highest index of a substring.")
+            print("rindex: Returns the highest index of a substring.")
+            print("rjust: Returns a right-justified version of the string.")
+            print("rpartition: Returns a tuple containing the left part, separator, and right part of the string.")
+            print("rsplit: Returns a list of the words in the string, starting from the right.")
+            print("rstrip: Returns a right-trimmed version of the string.")
+            print("split: Returns a list of the words in the string.")
+            print("splitlines: Returns a list of the lines in the string.")
+            print("startswith: Returns True if the string starts with the specified prefix.")
+            print("strip: Returns a trimmed version of the string.")
+            print("swapcase: Returns a string with uppercase characters converted to lowercase and vice versa.")
+            print("title: Returns a titlecased version of the string.")
+            print("translate: Returns a translated version of the string.")
+            print("upper: Returns an uppercase version of the string.")
+            print("zfill: Returns a version of the string padded with zeros.")          
+        else:
+            if method == "capitalize":
+                print("capitalize: Returns a capitalized version of the string.")
+                print("Syntax: string.capitalize()")
+                print("Example: 'hello world'.capitalize() returns 'Hello world'")
+            elif method == "casefold":
+                print("casefold: Returns a casefolded version of the string.")
+                print("Syntax: string.casefold()")
+                print("Example: 'ß'.casefold() returns 'ss'")
+            elif method == "center":
+                print("center: Returns a centered version of the string.")
+                print("Syntax: string.center(width[, fillchar])")
+                print("Example: 'hello'.center(10) returns '  hello   '")
+            elif method == "count":
+                print("count: Returns the number of non-overlapping occurrences of a substring.")
+                print("Syntax: string.count(sub[, start[, end]])")
+                print("Example: 'hello'.count('l') returns 2")
+            elif method == "encode":
+                print("encode: Returns an encoded version of the string.")
+                print("Syntax: string.encode(encoding='utf-8', errors='strict')")
+                print("Example: 'hello'.encode(encoding='utf-8') returns b'hello'")
+            elif method == "endswith":
+                print("endswith: Returns True if the string ends with the specified suffix.")
+                print("Syntax: string.endswith(suffix[, start[, end]])")
+                print("Example: 'hello'.endswith('lo') returns True")
+            elif method == "find":
+                print("find: Returns the lowest index of a substring.")
+                print("Syntax: string.find(sub[, start[, end]])")
+                print("Example: 'hello'.find('l') returns 2")
+            elif method == "format":
+                print("format: Formats the string using placeholders.")
+                print("Syntax: string.format(*args, **kwargs)")
+                print("Example: 'My name is {0} and I am {1} years old'.format('Alice', 25) returns 'My name is Alice and I am 25 years old'")
+            elif method == "index":
+                print("index: Returns the lowest index of a substring.")
+                print("Syntax: string.index(sub[, start[, end]])")
+                print("Example: 'hello'.index('l') returns 2")
+            elif method == "isalnum":
+                print("isalnum: Returns True if all characters are alphanumeric.")
+                print("Syntax: string.isalnum()")
+                print("Example: 'hello123'.isalnum() returns True")
+            elif method == "isalpha":
+                print("isalpha: Returns True if all characters are alphabetic.")
+                print("Syntax: string.isalpha()")
+                print("Example: 'hello'.isalpha() returns True")
+            elif method == "isdecimal":
+                print("isdecimal: Returns True if all characters are decimal.")
+                print("Syntax: string.isdecimal()")
+                print("Example: '123'.isdecimal() returns True")
+            elif method == "isdigit":
+                print("isdigit: Returns True if all characters are digits.")
+                print("Syntax: string.isdigit()")
+                print("Example: '123'.isdigit() returns True")
+            elif method == "isidentifier":
+                print("isidentifier: Returns True if the string is a valid identifier.")
+                print("Syntax: string.isidentifier()")
+                print("Example: 'hello_world'.isidentifier() returns True")
+            elif method == "islower":
+                print("islower: Returns True if all characters are lowercase.")
+                print("Syntax: string.islower()")
+                print("Example: 'hello'.islower() returns True")
+            elif method == "isnumeric":
+                print("isnumeric: Returns True if all characters are numeric.")
+                print("Syntax: string.isnumeric()")
+                print("Example: '123'.isnumeric() returns True")
+            elif method == "isprintable":
+                print("isprintable: Returns True if all characters are printable.")
+                print("Syntax: string.isprintable()")
+                print("Example: 'hello\\nworld'.isprintable() returns False")
+            elif method == "isspace":
+                print("isspace: Returns True if all characters are whitespace.")
+                print("Syntax: string.isspace()")
+                print("Example: '   '.isspace() returns True")
+            elif method == "istitle":
+                print("istitle: Returns True if the string is in title case.")
+                print("Syntax: string.istitle()")
+                print("Example: 'Hello World'.istitle() returns True")
+            elif method == "isupper":
+                print("isupper: Returns True if all characters are uppercase.")
+                print("Syntax: string.isupper()")
+                print("Example: 'HELLO'.isupper() returns True")
+            elif method == "join":
+                print("join: Joins the elements of an iterable using the string as a separator.")
+                print("Syntax: string.join(iterable)")
+                print("Example: ','.join(['a', 'b', 'c']) returns 'a,b,c'")
+            elif method == "ljust":
+                print("ljust: Returns a left-justified version of the string.")
+                print("Syntax: string.ljust(width[, fillchar])")
+                print("Example: 'hello'.ljust(10) returns 'hello     '")
+            elif method == "lower":
+                print("lower: Returns a lowercase version of the string.")
+                print("Syntax: string.lower()")
+                print("Example: 'Hello'.lower() returns 'hello'")
+            elif method == "lstrip":
+                print("lstrip: Returns a left-trimmed version of the string.")
+                print("Syntax: string.lstrip([chars])")
+                print("Example: '   hello'.lstrip() returns 'hello'")
+            elif method == "partition":
+                print("partition: Splits the string at the first occurrence of the specified separator.")
+                print("Syntax: string.partition(separator)")
+                print("Example: 'hello world'.partition(' ') returns ('hello', ' ', 'world')")
+            elif method == "replace":
+                print("replace: Returns a string with all occurrences of a substring replaced with another substring.")
+                print("Syntax: string.replace(old, new[, count])")
+                print("Example: 'hello world'.replace('o', 'e') returns 'helle werld'")
+            elif method == "rfind":
+                print("rfind: Returns the highest index of a substring.")
+                print("Syntax: string.rfind(sub[, start[, end]])")
+                print("Example: 'hello'.rfind('l') returns 3")
+            elif method == "rindex":
+                print("rindex: Returns the highest index of a substring.")
+                print("Syntax: string.rindex(sub[, start[, end]])")
+                print("Example: 'hello'.rindex('l') returns 3")
+            elif method == "rjust":
+                print("rjust: Returns a right-justified version of the string.")
+                print("Syntax: string.rjust(width[, fillchar])")
+                print("Example: 'hello'.rjust(10) returns '     hello'")
+            elif method == "rpartition":
+                print("rpartition: Splits the string at the last occurrence of the specified separator.")
+                print("Syntax: string.rpartition(separator)")
+                print("Example: 'hello world'.rpartition(' ') returns ('hello', ' ', 'world')")
+            elif method == "rsplit":
+                print("rsplit: Splits the string at the specified separator, starting from the right.")
+                print("Syntax: string.rsplit(separator[, maxsplit])")
+                print("Example: 'hello world'.rsplit(' ') returns ['hello', 'world']")
+            elif method == "rstrip":
+                print("rstrip: Returns a right-trimmed version of the string.")
+                print("Syntax: string.rstrip([chars])")
+                print("Example: 'hello '.rstrip() returns 'hello'")
+            elif method == "split":
+                print("split: Splits the string at the specified separator.")
+                print("Syntax: string.split(separator[, maxsplit])")
+                print("Example: 'hello world'.split(' ') returns ['hello', 'world']")
+            elif method == "splitlines":
+                print("splitlines: Splits the string at line breaks.")
+                print("Syntax: string.splitlines([keepends])")
+                print("Example: 'hello\nworld'.splitlines() returns ['hello', 'world']")
+            elif method == "startswith":
+                print("startswith: Returns True if the string starts with the specified substring.")
+                print("Syntax: string.startswith(substring[, start[, end]])")
+                print("Example: 'hello'.startswith('he') returns True")
+            elif method == "strip":
+                print("strip: Returns a trimmed version of the string.")
+                print("Syntax: string.strip([chars])")
+                print("Example: ' hello '.strip() returns 'hello'")
+            elif method == "swapcase":
+                print("swapcase: Returns a string with uppercase characters converted to lowercase and vice versa.")
+                print("Syntax: string.swapcase()")
+                print("Example: 'Hello World'.swapcase() returns 'hELLO wORLD'")
+            elif method == "title":
+                print("title: Returns a title-cased version of the string.")
+                print("Syntax: string.title()")
+                print("Example: 'hello world'.title() returns 'Hello World'")
+            elif method == "translate":
+                print("translate: Returns a translated version of the string.")
+                print("Syntax: string.translate(table)")
+                print("Example: 'hello'.translate(str.maketrans('o', 'e')) returns 'helle'")
+            elif method == "upper":
+                print("upper: Returns an uppercase version of the string.")
+                print("Syntax: string.upper()")
+                print("Example: 'hello'.upper() returns 'HELLO'")
+            else:
+                print("Invalid method. Please choose a method from the string.")           
+    
+    
+    elif datatype == "tuple":
+        if method == "all":
+            print("count: Returns the number of times a specified value appears in the tuple.")
+            print("index: Searches the tuple for a specified value and returns the position of the first occurrence.")
+        elif method == "count":
+            print("count: Returns the number of times a specified value appears in the tuple.")
+            print("Syntax: tuple.count(value)")
+            print("Example: (1, 2, 3, 2).count(2) returns 2")
+        elif method == "index":
+            print("index: Searches the tuple for a specified value and returns the position of the first occurrence.")
+            print("Syntax: tuple.index(value[, start[, end]])")
+            print("Example: (1, 2, 3, 2).index(2) returns 1")
+        else:
+            print("Invalid method. Please choose a method from the tuple.")
+    
+    
+    elif datatype == "dictionary":
+        if method == "all":
+            print("clear: Removes all the key-value pairs from the dictionary.")
+            print("copy: Returns a shallow copy of the dictionary.")
+            print("get: Returns the value of the specified key. If the key does not exist, it returns the specified default value.")
+            print("items: Returns a list of key-value pairs in the dictionary.")
+            print("keys: Returns a list of all the keys in the dictionary.")
+            print("pop: Removes the specified key-value pair from the dictionary and returns its value. If the key does not exist, it returns the specified default value.")
+            print("popitem: Removes and returns a random key-value pair from the dictionary.")
+            print("setdefault: Returns the value of the specified key. If the key does not exist, it adds the key-value pair to the dictionary.")
+            print("update: Updates the dictionary with the key-value pairs from another dictionary or iterable.")
+            print("values: Returns a list of all the values in the dictionary.")
+        elif method == "clear":
+            print("clear: Removes all the key-value pairs from the dictionary.")
+            print("Syntax: dictionary.clear()")
+            print("Example: {'a': 1, 'b': 2}.clear() returns {}")
+        elif method == "copy":
+            print("copy: Returns a shallow copy of the dictionary.")
+            print("Syntax: dictionary.copy()")
+            print("Example: {'a': 1, 'b': 2}.copy() returns {'a': 1, 'b': 2}")
+        elif method == "get":
+            print("get: Returns the value of the specified key. If the key does not exist, it returns the specified default value.")
+            print("Syntax: dictionary.get(key[, default])")
+            print("Example: {'a': 1, 'b': 2}.get('c', 0) returns 0")
+        elif method == "items":
+            print("items: Returns a list of key-value pairs in the dictionary.")
+            print("Syntax: dictionary.items()")
+            print("Example: {'a': 1, 'b': 2}.items() returns [('a', 1), ('b', 2)]")
+        elif method == "keys":
+            print("keys: Returns a list of all the keys in the dictionary.")
+            print("Syntax: dictionary.keys()")
+            print("Example: {'a': 1, 'b': 2}.keys() returns ['a', 'b']")
+        elif method == "pop":
+            print("pop: Removes the specified key-value pair from the dictionary and returns its value. If the key does not exist, it returns the specified default value.")
+            print("Syntax: dictionary.pop(key[, default])")
+            print("Example: {'a': 1, 'b': 2}.pop('a', 0) returns 1")
+        elif method == "popitem":
+            print("popitem: Removes and returns a random key-value pair from the dictionary.")
+            print("Syntax: dictionary.popitem()")
+            print("Example: {'a': 1, 'b': 2}.popitem() returns ('a', 1)")
+        elif method == "setdefault":
+            print("setdefault: Returns the value of the specified key. If the key does not exist, it adds the key-value pair to the dictionary.")
+            print("Syntax: dictionary.setdefault(key[, default])")
+            print("Example: {'a': 1, 'b': 2}.setdefault('c', 0) returns 0")
+        elif method == "update":
+            print("update: Updates the dictionary with the key-value pairs from another dictionary or iterable.")
+            print("Syntax: dictionary.update([other])")
+            print("Example: {'a': 1, 'b': 2}.update({'c': 3}) returns {'a': 1, 'b': 2, 'c': 3}")
+        elif method == "values":
+            print("values: Returns a list of all the values in the dictionary.")
+            print("Syntax: dictionary.values()")
+            print("Example: {'a': 1, 'b': 2}.values() returns [1, 2]")
+        else:
+            print("Invalid method. Please choose a method from the dictionary.")
+    else:
+        print("Invalid datatype.")
+          
+datatype_methods_info()
